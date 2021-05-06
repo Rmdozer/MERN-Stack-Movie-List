@@ -30,13 +30,13 @@ export default class EditTodo extends Component {
             .then(res => console.log(res.data));
         this.props.history.push('/');
     }
-
+    adult = true;
     render() {
         return (
             <div>
                 <h3 style={{color: 'white' }} align="center">{this.state.movie.title} Information</h3>
                 <p style={{color: 'white' }}>
-                    Adult: {this.state.movie.adult}<br/>
+                    Adult: {String(this.state.movie.adult)}<br/>
                     Backdrop Path: {this.state.movie.backdrop_path}<br/>
                     Budget: {this.state.movie.budget}<br/>
                     Homepage: {this.state.movie.homepage}<br/>
@@ -53,7 +53,7 @@ export default class EditTodo extends Component {
                     Status: {this.state.movie.status}<br/>
                     Tagline: {this.state.movie.tagline}<br/>
                     Title: {this.state.movie.title}<br/>
-                    Video: {this.state.movie.video}<br/>
+                    Video: {String(this.state.movie.video)}<br/>
                     Vote Average: {this.state.movie.vote_average}<br/>
                     Vote Count: {this.state.movie.vote_count}<br/>
                 </p>
